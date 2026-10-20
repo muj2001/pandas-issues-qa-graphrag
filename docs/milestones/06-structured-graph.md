@@ -2,28 +2,29 @@
 
 ## Concepts
 
-- Nodes, edges, and properties: Which Jira facts are entities, relationships, or attributes?
+- Nodes, edges, and properties: Which GitHub facts are entities, relationships, or attributes?
 - Schema design from questions: Which relationship types are needed to answer your actual multi-hop questions?
-- Entity resolution: How will you recognize when two records refer to the same person?
+- Link semantics: Why is a PR referencing an issue different from a merged PR closing it?
 - Graph queries: What can a direct Cypher or NetworkX query answer without an LLM?
 
 ## Learning Outcomes
 
 - Derive a small graph schema from questions instead of modeling every available field.
-- Build and query a graph using structured Jira fields.
+- Build and query a graph using structured GitHub issue, timeline, and PR data.
 - Identify questions a structured graph helps answer and those it does not.
 
 ## Tasks
 
 - Write down 10 to 20 questions the graph should answer. Derive the schema from them (entity types, relationship types, properties). Keep it small.
-- Build the graph from structured Jira fields only: issue links, parent/epic, component, fix version, assignee/reporter.
+- Fetch and save raw issue timelines and details for linked PRs; paginate where needed. Keep these snapshots separate from derived graph data.
+- Build the graph from structured GitHub data only: issues, labels, referenced PRs, and PR milestones. Distinguish a cross-reference from a closing link; check PR merge status before treating it as a fix.
 - Write a few Cypher (or NetworkX) queries that answer your multi-hop eval questions directly.
 
 ## Acceptance Criteria
 
 - The schema is documented in the repo, with the questions that justify each type.
 - At least 5 multi-hop questions are answered correctly through graph queries alone.
-- People are deduplicated into single nodes.
+- A referenced but unmerged PR is not presented as the fix for an issue.
 
 ## Learning Check
 

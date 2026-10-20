@@ -16,7 +16,7 @@
 ## Tasks
 
 - Use an LLM to extract entities and relations from descriptions and comments, restricted to your schema. Spot-check a sample for accuracy.
-- Implement graph-assisted retrieval: vector search finds seed issues, then expand through links or shared components, then pass the expanded set to the LLM.
+- Implement graph-assisted retrieval: vector search finds seed issues, then expand through verified issue–PR links or shared labels, then pass the expanded issue set to the LLM.
 - Optionally try text-to-Cypher for structured questions.
 - Run the multi-hop and aggregation questions through three systems: vector-only, graph-assisted, and hybrid.
 

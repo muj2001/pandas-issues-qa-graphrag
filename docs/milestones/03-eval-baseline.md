@@ -2,20 +2,20 @@
 
 ## Concepts
 
-- Recall@k and MRR: What does each metric reward, and how do they behave when a question has multiple relevant tickets?
+- Recall@k and MRR: What does each metric reward, and how do they behave when a question has multiple relevant issues?
 - Human-written test questions: What would make a generated question set misleadingly easy?
 - Train/test leakage: How can changing the system after seeing eval answers bias later comparisons?
 - Question types: Why report exact-term, symptom-style, similar-issue, and multi-hop results separately?
 
 ## Learning Outcomes
 
-- Build a versioned eval set with known relevant ticket keys and question-type labels.
+- Build a versioned eval set with known relevant GitHub issue numbers and question-type labels.
 - Reproduce baseline retrieval numbers and diagnose failures by question type.
 - Distinguish a measured result from a hypothesis about its cause.
 
 ## Tasks
 
-- Write 50 to 100 real questions by hand, each with the correct ticket key(s). Include a mix: exact-term, symptom-style, similar-issue, and multi-hop questions (tag them).
+- Write 50 to 100 real questions by hand, each with the relevant issue number(s) from the ingested slice. Include a mix: exact-term, symptom-style, similar-issue, and multi-hop questions (tag them).
 - Write a script that runs retrieval on all questions and reports recall@k and MRR, broken down by question type.
 - Record baseline numbers in a results log.
 

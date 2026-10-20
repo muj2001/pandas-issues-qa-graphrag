@@ -2,7 +2,7 @@
 
 ## Concepts
 
-- Grounding and citation formats: How can a reader verify a claim against a retrieved ticket?
+- Grounding and citation formats: How can a reader verify a claim against a retrieved GitHub issue and its comments?
 - Missing or conflicting context: When should the system say it cannot answer?
 - System prompts, structured output, and few-shot examples: Which constraints belong in the prompt, and how will you test their effect?
 - Answer evaluation: How will you detect unsupported claims and false refusals?
@@ -15,7 +15,7 @@
 
 ## Tasks
 
-- Write a prompt that forces answers to rely on retrieved context only, with inline citations.
+- Write a prompt that forces answers to rely on retrieved context only, with inline issue-number and URL citations.
 - Add a refusal path: if context doesn't contain the answer, say so.
 - Test with questions that have no answer in the corpus, and questions where retrieved context conflicts.
 - Compare 2 to 3 prompt versions on a fixed set of 20 questions, scored by hand.

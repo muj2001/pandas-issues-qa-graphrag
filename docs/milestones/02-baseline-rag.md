@@ -15,15 +15,15 @@
 
 ## Tasks
 
-- Chunk per issue (split only long ones), with the key and title repeated in every chunk.
-- Embed and index chunks with metadata (key, status, component, dates, URL).
-- Build a CLI: question in, top-k chunks out, LLM answer with ticket keys cited.
+- Chunk per issue (split only long ones), with issue number and title repeated in every chunk.
+- Embed and index chunks with metadata (issue number, state, labels, dates, URL).
+- Build a CLI: question in, top-k chunks out, LLM answer with issue-number and URL citations.
 
 ## Acceptance Criteria
 
-- Answers cite real ticket keys from retrieved chunks.
-- Metadata filters work (for example, only resolved bugs in a component).
-- Chunk IDs follow a scheme that lets you delete and reindex one ticket (for example `KAFKA-123#comments-2`).
+- Answers cite real issue numbers and URLs from retrieved chunks.
+- Metadata filters work (for example, only closed issues labeled `Regression`).
+- Chunk IDs follow a scheme that lets you delete and reindex one issue (for example `issue-48757#comments-2`).
 
 ## Learning Check
 

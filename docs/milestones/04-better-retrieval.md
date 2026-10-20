@@ -27,4 +27,4 @@
 
 ## Learning Check
 
-Which improvement surprised you? Why do exact terms like ticket keys and error codes need keyword search?
+Which improvement surprised you? Why do exact terms like issue numbers and error messages need keyword search?

@@ -1,0 +1,19 @@
+[project]
+name = "kafka-docs-qa-graphrag"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "muj2001", email = "m.usman.jehangir@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "requests>=2.34.2",
+]
+
+[project.scripts]
+kafka-docs-qa-graphrag = "kafka_docs_qa_graphrag:main"
+
+[build-system]
+requires = ["uv_build>=0.12.20,<0.13.0"]
+build-backend = "uv_build"
